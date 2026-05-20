@@ -1,3 +1,179 @@
+# School Management System
+
+A web-based School Management System developed using Laravel and MySQL.  
+This application helps schools manage students, teachers, classes, courses, and administrative operations through a modern and user-friendly interface.
+
+---
+
+## Features
+
+### Admin
+- Manage students
+- Manage teachers
+- Manage parents
+- Manage classes
+- Manage subjects
+- Manage departments
+- Dashboard Admin
+
+### Authentication
+- Login & Registration
+- Role-based access control
+- Secure authentication system
+
+---
+
+## Technologies Used
+
+- Laravel
+- PHP
+- MySQL
+- Bootstrap
+- HTML5
+- CSS3
+- JavaScript
+
+---
+
+## Installation
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/yourusername/school-management.git
+```
+
+---
+
+### 2. Open Project Folder
+
+```bash
+cd school-management
+```
+
+---
+
+### 3. Install Dependencies
+
+```bash
+composer install
+```
+
+---
+
+### 4. Create Environment File
+
+```bash
+cp .env.example .env
+```
+
+---
+
+### 5. Configure Database
+
+Update `.env` file:
+
+```env
+DB_DATABASE=school_management
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+---
+
+### 6. Generate Application Key
+
+```bash
+php artisan key:generate
+```
+
+---
+
+### 7. Run Migrations
+
+```bash
+php artisan migrate
+```
+
+---
+
+### 8. Start Development Server
+
+```bash
+php artisan serve
+```
+
+---
+
+### 9. Open in Browser
+
+```text
+http://127.0.0.1:8000
+```
+
+---
+
+## Project Structure
+
+```text
+school-management/
+│
+├── app/
+├── bootstrap/
+├── config/
+├── database/
+├── public/
+├── resources/
+├── routes/
+├── storage/
+├── tests/
+├── .env
+├── artisan
+├── composer.json
+└── README.md
+```
+
+---
+
+## Screenshots
+
+### Dashboard Admin
+
+![image]
+
+### Students Management
+
+![image]
+
+### Teachers Management
+
+![image]
+
+---
+
+## Future Improvements
+
+- Parent dashboard
+- Student dashboard
+- Teacher dashboard
+- Admin dashboard
+I still devedevelop this site :
+- PDF report generation
+- Email notification
+
+---
+
+## Author
+
+AZIZI Mohamed
+
+GitHub: https://github.com/medo5000
+
+---
+
+## License
+
+This project is developed for educational purposes.
 ---
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
