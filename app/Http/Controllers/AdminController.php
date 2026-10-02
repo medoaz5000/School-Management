@@ -10,7 +10,7 @@ use App\Models\User;
 
 class AdminController extends Controller
 {
-    public function list()
+    public function list() 
     {
         $data['getRecord'] = User::getAdmin();
         $data['header_title'] = 'Admin List';
