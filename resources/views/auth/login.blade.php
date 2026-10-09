@@ -103,7 +103,7 @@
             </div>
             <div class="input-group mb-1">
               <div class="form-floating">
-                <input id="Password" type="password" name="password" class="form-control" value="" placeholder="" required />
+                <input id="Password" type="password" name="password" class="form-control" value="demo0000" placeholder="" required />
                 <label for="loginPassword">Password</label>
                 <span class="position-absolute top-50 end-0 translate-middle-y me-3 cursor-pointer" id="togglePassword">
                   <i class="bi bi-eye" id="eyeIcon"></i>
