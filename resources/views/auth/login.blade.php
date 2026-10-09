@@ -94,7 +94,7 @@
             @csrf
             <div class="input-group mb-1">
               <div class="form-floating">
-                <input id="Email" type="email" name="email" class="form-control" value="{{ old('email') }}" placeholder="" required />
+                <input id="Email" type="email" name="email" class="form-control" value="demo@exemple.com" placeholder="" required />
                 <label for="loginEmail">Email</label>
               </div>
               <div class="input-group-text">
