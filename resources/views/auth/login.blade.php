@@ -107,13 +107,13 @@
             </div>
             <p class="text-center text-secondary small mb-2">&mdash; or sign in with your own account &mdash;</p>
           @endif
-          
+
             
           <form method="POST" action="{{ url('login') }}" >
             @csrf
             <div class="input-group mb-1">
               <div class="form-floating">
-                <input id="Email" type="email" name="email" class="form-control" value="demo@exemple.com" placeholder="" required />
+                <input id="Email" type="email" name="email" class="form-control" placeholder="" required />
                 <label for="loginEmail">Email</label>
               </div>
               <div class="input-group-text">
@@ -122,7 +122,7 @@
             </div>
             <div class="input-group mb-1">
               <div class="form-floating">
-                <input id="Password" type="password" name="password" class="form-control" value="demo0000" placeholder="" required />
+                <input id="Password" type="password" name="password" class="form-control" placeholder="" required />
                 <label for="loginPassword">Password</label>
                 <span class="position-absolute top-50 end-0 translate-middle-y me-3 cursor-pointer" id="togglePassword">
                   <i class="bi bi-eye" id="eyeIcon"></i>
@@ -162,12 +162,15 @@
           
           <!-- /.social-auth-links -->
 
+          {{-- DEMO: f demo mode ma kaybanouch had les liens --}}
+          @unless(config('demo.enabled'))
           <p class="mb-1">
             <a href="{{ url('forget-password')}}">I forgot my password</a>
           </p>
           <p class="mb-1">
             <a href="{{ url('register')}}">I don't have account</a>
           </p>
+          @endunless
           
         </div>
         <!-- /.login-card-body -->
