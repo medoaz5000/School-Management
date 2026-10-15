@@ -313,6 +313,21 @@
                 </a>
               </li>
 
+               <!-- DEMO DATA: menu dyal student -->
+              <li class="nav-item">
+                <a href="{{url('student/my_class')}}" class="nav-link @if(Request::segment(2) == 'my_class') active @endif">
+                  <i class="nav-icon bi bi-book"></i>
+                  <p>My Class</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="{{url('student/my_profile')}}" class="nav-link @if(Request::segment(2) == 'my_profile') active @endif">
+                  <i class="nav-icon bi bi-person-badge"></i>
+                  <p>My Profile</p>
+                </a>
+              </li>
+
               <li class="nav-item">
                 <a href="{{url('student/change_password')}}" class="nav-link @if(Request::segment(2) == 'change_password') active @endif">
                   <i class="nav-icon bi bi-gear"></i>
