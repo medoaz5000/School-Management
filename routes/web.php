@@ -145,6 +145,11 @@ Route::group(['middleware' => 'student'], function(){
 
     Route::get('student/dashboard', [DashboardController::class, 'dashboard']);
 
+    // DEMO DATA: pages dyal student (read-only)
+    Route::get('student/my_class', [StudentController::class, 'myClass']);
+    Route::get('student/my_profile', [StudentController::class, 'myProfile']);
+
+
         //Change Password
     Route::get('student/change_password', [UserController::class, 'change_password']);
     Route::post('student/change_password', [UserController::class, 'update_change_password']);

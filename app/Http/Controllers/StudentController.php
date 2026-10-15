@@ -162,5 +162,36 @@ class StudentController extends Controller
     }
 
 
+    // student/my_class : classe + subjects + teachers
+    public function myClass()
+    {
+        $user = Auth::user();
+
+        $data['header_title'] = 'My Class';
+        $data['class']        = User::classById($user->class_id);
+        $data['subjects']     = User::subjectRows([(int) $user->class_id]);
+        $data['teachers']     = User::classTeachers($user->class_id);
+        $data['classmates']   = User::students([(int) $user->class_id])
+                                    ->where('id', '!=', $user->id);
+
+        return view('student.my_class', $data);
+    }
+
+    // student/my_profile : ma3loumat dyalo
+    public function myProfile()
+    {
+        $user = Auth::user();
+
+        $data['header_title'] = 'My Profile';
+        $data['me']           = $user;
+        $data['class']        = PanelData::classById($user->class_id);
+        $data['parent']       = $user->parent_id
+                                    ? DB::table('users')->where('id', $user->parent_id)->first()
+                                    : null;
+
+        return view('student.my_profile', $data);
+    }
+
+
   
 }
