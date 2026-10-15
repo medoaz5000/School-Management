@@ -12,7 +12,7 @@
 return [
 
     // false par défaut => ila nsiti .env, l'application katbqa normale
-    'enabled' => env('DEMO_MODE', false),
+    'enabled' => env('DEMO_MODE', true),
 
     // user_type: 1 = admin, 2 = teacher, 3 = student, 4 = parent
     'accounts' => [
