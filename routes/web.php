@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ClassController;
@@ -12,6 +13,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\ParentController;
 use App\Http\Controllers\TeacherController;
+use App\Models\User;
+use App\Http\Controllers\DemoController; // DEMO: login sari3
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +37,10 @@ Route::get('logout', [AuthController::class, 'logout']);
 
 Route::get('forget-password', [AuthController::class, 'forgetpassword']);
 Route::post('forget-password', [AuthController::class, 'forgetpass']);
+
+// DEMO: /demo/login/{admin|teacher|student|parent}  (kay-khdem ghir ila DEMO_MODE=true)
+Route::get('demo/login/{role}', [DemoController::class, 'login']);
+//--------------------------------------------
 
 Route::get('/register', [AuthController::class, 'register']);
 Route::post('register', [AuthController::class, 'Authregister']);
@@ -151,4 +158,15 @@ Route::group(['middleware' => 'parent'], function(){
         //Change Password
     Route::get('parent/change_password', [UserController::class, 'change_password']);
     Route::post('parent/change_password', [UserController::class, 'update_change_password']);
+});
+
+
+//FOR VISITOR
+Route::middleware('auth')->group(function () {
+    Route::get('demo/dashboard', function () {
+        if(Auth::User()->user_type != 5) {
+            abort(403);
+        }
+        return view('demo.dashboard');
+    });
 });

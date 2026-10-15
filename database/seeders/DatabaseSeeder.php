@@ -12,6 +12,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // DEMO: kay-créer comptes demo ghir ila DEMO_MODE=true
+        if (config('demo.enabled')) {
+            $this->call(DemoSeeder::class);
+        }
+
+        
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

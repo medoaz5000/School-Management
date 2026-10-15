@@ -23,11 +23,11 @@ class Adminmiddleware
                 return $next($request);
             }else{
                 Auth::logout();
-                return redirect();
+                return redirect('/'); // FIX: redirect() bla argument kay3ti erreur 500
             }
         }else{
             Auth::logout();
-            return redirect();
+            return redirect('/'); // FIX: redirect() bla argument kay3ti erreur 500
         }
         
     }

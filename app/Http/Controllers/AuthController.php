@@ -63,6 +63,9 @@ class AuthController extends Controller
             }else if(Auth::user()->user_type == 4){
                 $request->session()->regenerate();
                 return redirect('parent/dashboard');
+            }else if(Auth::user()->user_type == 5){
+                $request->session()->regenerate();
+                return redirect('demo/dashboard');
             }
             
         }else{

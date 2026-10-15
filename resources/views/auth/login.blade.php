@@ -89,6 +89,25 @@
                     {{ session('success') }}
                 </div>
             @endif
+
+          {{-- DEMO: buttons dyal login sari3 (kaybano ghir f demo mode) --}}
+          @if(config('demo.enabled'))
+            @if(session('demo_blocked'))
+              <div class="alert alert-warning">{{ session('demo_blocked') }}</div>
+            @endif
+            <p class="text-center fw-semibold mb-2">Try the demo as:</p>
+            <div class="row g-2 mb-3">
+              @foreach(config('demo.accounts') as $role => $acc)
+                <div class="col-6">
+                  <a href="{{ url('demo/login/'.$role) }}" class="btn btn-outline-primary w-100">
+                    <i class="bi {{ $acc['icon'] }}"></i> {{ $acc['label'] }}
+                  </a>
+                </div>
+              @endforeach
+            </div>
+            <p class="text-center text-secondary small mb-2">&mdash; or sign in with your own account &mdash;</p>
+          @endif
+          
             
           <form method="POST" action="{{ url('login') }}" >
             @csrf

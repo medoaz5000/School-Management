@@ -81,6 +81,10 @@
   <!--end::Head-->
   <!--begin::Body-->
   <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
+
+    {{-- DEMO: banner + message "action blocked" (fixed => ma kaybddel layout) --}}
+    @include('layouts.demo-banner')
+    
     <!--begin::App Wrapper-->
     <div class="app-wrapper">
 
