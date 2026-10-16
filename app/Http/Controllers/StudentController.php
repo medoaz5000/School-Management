@@ -186,7 +186,7 @@ class StudentController extends Controller
 
         $data['header_title'] = 'My Profile';
         $data['me']           = $user;
-        $data['class']        = PanelData::classById($user->class_id);
+        //$data['class']        = PanelData::classById($user->class_id);
         $data['parent']       = $user->parent_id
                                     ? DB::table('users')->where('id', $user->parent_id)->first()
                                     : null;
