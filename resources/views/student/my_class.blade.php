@@ -22,15 +22,15 @@
               <table class="table table-striped mb-0">
                 <thead><tr><th>#</th><th>Subject</th><th>Type</th></tr></thead>
                 <tbody>
-                  @forelse($subjects as $subject)
+                  
                     <tr>
-                      <td>{{ $loop->iteration }}</td>
-                      <td>{{ $subject->name }}</td>
-                      <td>{{ $subject->type }}</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
                     </tr>
-                  @empty
+                  
                     <tr><td colspan="3" class="text-center text-secondary">No active subjects yet.</td></tr>
-                  @endforelse
+                  
                 </tbody>
               </table>
             </div>
