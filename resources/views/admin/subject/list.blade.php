@@ -115,7 +115,7 @@
                               <td>{{ $item->name}}</td>
                               <td>{{ $item->type}}<td>
                                 @if($item->status == 0)
-                                    <span class="bg-warning text-black p-1 rounded-pill ">Active</span>
+                                    <span class="badge text-bg-warning ">Active</span>
                                 @else
                                     <span class="bg-secondary text-white p-1 rounded-pill">Inactive</span>
                                 @endif

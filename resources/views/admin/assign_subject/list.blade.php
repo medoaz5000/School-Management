@@ -114,9 +114,9 @@
                             <td>{{ $value->subject_name}}</td>
                             <td>
                               @if($value->status == 0)
-                                  <span class="bg-warning text-black p-1 rounded-pill "><small>Active</small></span>
+                                  <span class="badge text-bg-warning "><small>Active</small></span>
                               @else
-                                  <span class="bg-secondary text-white p-1 rounded-pill text-sm"><small>Inactive</small></span>
+                                  <span class="badge text-bg-secondary"><small>Inactive</small></span>
                               @endif
                             </td>
                             <td>{{ $value->created_by_name}}</td>

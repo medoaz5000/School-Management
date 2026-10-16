@@ -110,9 +110,9 @@
                               <td>{{ $item->name}}</td>
                               <td>
                                 @if($item->status == 0)
-                                    <span class="bg-warning text-black p-1 rounded-pill ">Active</span>
+                                    <span class="badge text-bg-warning ">Active</span>
                                 @else
-                                    <span class="bg-secondary text-white p-1 rounded-pill text-sm">Inactive</span>
+                                    <span class="badge text-bg-secondary">Inactive</span>
                                 @endif
                               </td>
                               <td>{{ $item->created_by_name}}</td>
