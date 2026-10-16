@@ -57,7 +57,7 @@
             </div>
           </div>
           <div class="card card-warning card-outline mb-4">
-            <div class="card-header"><h3 class="card-title">Classmates ({{ count($classmates) }})</h3></div>
+            <div class="card-header"><h3 class="card-title">Classmates </h3></div>
             <div class="card-body p-0">
               <table class="table table-striped mb-0">
                 <tbody>
