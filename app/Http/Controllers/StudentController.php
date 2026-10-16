@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use App\Support\PanelData;
+use Illuminate\Support\Facades\DB;
 
 use App\Models\User;
 
