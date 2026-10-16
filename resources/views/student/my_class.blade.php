@@ -6,7 +6,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-6">
-          <h3 class="mb-0">My Class: {{ $class->name ?? '-' }}</h3>
+          <h3 class="mb-0">My Class: </h3>
         </div>
       </div>
     </div>
@@ -22,15 +22,15 @@
               <table class="table table-striped mb-0">
                 <thead><tr><th>#</th><th>Subject</th><th>Type</th></tr></thead>
                 <tbody>
-                  @forelse($subjects as $subject)
+                  
                     <tr>
-                      <td>{{ $loop->iteration }}</td>
-                      <td>{{ $subject->name }}</td>
-                      <td>{{ $subject->type }}</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
                     </tr>
-                  @empty
+                  
                     <tr><td colspan="3" class="text-center text-secondary">No active subjects yet.</td></tr>
-                  @endforelse
+                  
                 </tbody>
               </table>
             </div>
@@ -43,15 +43,15 @@
               <table class="table table-striped mb-0">
                 <thead><tr><th>#</th><th>Name</th><th>Email</th></tr></thead>
                 <tbody>
-                  @forelse($teachers as $teacher)
+                  
                     <tr>
-                      <td>{{ $loop->iteration }}</td>
-                      <td>{{ $teacher->name }} {{ $teacher->last_name }}</td>
-                      <td>{{ $teacher->email }}</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
                     </tr>
-                  @empty
+                  
                     <tr><td colspan="3" class="text-center text-secondary">No teacher assigned yet.</td></tr>
-                  @endforelse
+                  
                 </tbody>
               </table>
             </div>
@@ -61,11 +61,11 @@
             <div class="card-body p-0">
               <table class="table table-striped mb-0">
                 <tbody>
-                  @forelse($classmates as $mate)
-                    <tr><td>{{ $loop->iteration }}</td><td>{{ $mate->name }} {{ $mate->last_name }}</td></tr>
-                  @empty
+                  
+                    <tr><td></td><td></td></tr>
+                  
                     <tr><td class="text-center text-secondary">No classmates yet.</td></tr>
-                  @endforelse
+                  
                 </tbody>
               </table>
             </div>

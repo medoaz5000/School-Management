@@ -167,16 +167,16 @@ class StudentController extends Controller
     // student/my_class : classe + subjects + teachers
     public function myClass()
     {
-        $user = Auth::user();
+        // $user = Auth::user();
 
-        $data['header_title'] = 'My Class';
-        $data['class']        = PanelData::classById($user->class_id);
-        $data['subjects']     = PanelData::subjectRows([(int) $user->class_id]);
-        $data['teachers']     = PanelData::classTeachers($user->class_id);
-        $data['classmates']   = PanelData::students([(int) $user->class_id])
-                                    ->where('id', '!=', $user->id);
+        // $data['header_title'] = 'My Class';
+        // $data['class']        = PanelData::classById($user->class_id);
+        // $data['subjects']     = PanelData::subjectRows([(int) $user->class_id]);
+        // $data['teachers']     = PanelData::classTeachers($user->class_id);
+        // $data['classmates']   = PanelData::students([(int) $user->class_id])
+        //                             ->where('id', '!=', $user->id);
 
-        return view('student.dashboard', $data);
+        return view('student.my_class');
     }
 
     // student/my_profile : ma3loumat dyalo
