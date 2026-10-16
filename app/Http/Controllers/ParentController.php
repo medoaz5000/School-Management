@@ -9,6 +9,7 @@ use Illuminate\Support\Str;
 
 use App\Models\ClassModel;
 use App\Models\User;
+use App\Support\PanelData;
 
 class ParentController extends Controller
 {
@@ -121,5 +122,30 @@ class ParentController extends Controller
         $data['getSearchStudent'] = User::getSearchStudent();
         $data['header_title'] = 'Assign Parent to Student';
         return view('admin.parent.assign_student', $data);
+    }
+
+    // parent/my_children : liste dyal l'enfants
+    public function myChildren()
+    {
+        $data['header_title'] = 'My Children';
+        $data['children']     = PanelData::children(Auth::id());
+
+        return view('parent.my_children', $data);
+    }
+
+    // parent/child/{id} : details dyal wlid wa7ed
+    public function child($id)
+    {
+        // Securité: parent ichouf ghir l'enfants dyalo
+        $child = PanelData::children(Auth::id())->firstWhere('id', (int) $id);
+        abort_if(empty($child), 404);
+
+        $data['header_title'] = 'Child Details';
+        $data['child']        = $child;
+        $data['class']        = PanelData::classById($child->class_id);
+        $data['subjects']     = PanelData::subjectRows([(int) $child->class_id]);
+        $data['teachers']     = PanelData::classTeachers($child->class_id);
+
+        return view('parent.child', $data);
     }
 }

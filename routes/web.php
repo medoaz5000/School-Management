@@ -165,6 +165,11 @@ Route::group(['middleware' => 'parent'], function(){
     
     Route::get('parent/dashboard', [DashboardController::class, 'dashboard']);
 
+    // DEMO DATA: pages dyal parent (read-only)
+    Route::get('parent/my_children', [ParentController::class, 'myChildren']);
+    Route::get('parent/child/{id}', [ParentController::class, 'child']);
+
+
         //Change Password
     Route::get('parent/change_password', [UserController::class, 'change_password']);
     Route::post('parent/change_password', [UserController::class, 'update_change_password']);

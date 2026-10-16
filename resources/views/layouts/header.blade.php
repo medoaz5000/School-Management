@@ -357,6 +357,14 @@
                 </a>
               </li>
 
+              <!-- DEMO DATA: menu dyal parent -->
+              <li class="nav-item">
+                <a href="{{url('parent/my_children')}}" class="nav-link @if(in_array(Request::segment(2), ['my_children','child'])) active @endif">
+                  <i class="nav-icon bi bi-people"></i>
+                  <p>My Children</p>
+                </a>
+              </li>
+
               <li class="nav-item">
                 <a href="{{url('parent/change_password')}}" class="nav-link @if(Request::segment(2) == 'change_password') active @endif">
                   <i class="nav-icon bi bi-gear"></i>
