@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
-use App\Http\Support\PanelData;
+use App\Support\PanelData;
 use Illuminate\Support\Facades\DB;
 
 use App\Models\User;
@@ -186,7 +186,7 @@ class StudentController extends Controller
 
         $data['header_title'] = 'My Profile';
         $data['me']           = $user;
-        //$data['class']        = PanelData::classById($user->class_id);
+        $data['class']        = PanelData::classById($user->class_id);
         $data['parent']       = $user->parent_id
                                     ? DB::table('users')->where('id', $user->parent_id)->first()
                                     : null;
