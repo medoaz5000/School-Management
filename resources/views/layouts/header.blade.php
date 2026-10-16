@@ -299,6 +299,21 @@
                 </a>
               </li>
 
+              <!-- DEMO DATA: menu dyal teacher -->
+              <li class="nav-item">
+                <a href="{{url('teacher/my_class')}}" class="nav-link @if(Request::segment(2) == 'my_class') active @endif">
+                  <i class="nav-icon bi bi-book"></i>
+                  <p>My Classes</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="{{url('teacher/my_student')}}" class="nav-link @if(Request::segment(2) == 'my_student') active @endif">
+                  <i class="nav-icon bi bi-people"></i>
+                  <p>My Students</p>
+                </a>
+              </li>
+
               <li class="nav-item">
                 <a href="{{url('teacher/change_password')}}" class="nav-link @if(Request::segment(2) == 'change_password') active @endif">
                   <i class="nav-icon bi bi-gear"></i>
