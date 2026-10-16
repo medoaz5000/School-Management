@@ -176,7 +176,7 @@ class StudentController extends Controller
         $data['classmates']   = PanelData::students([(int) $user->class_id])
                                     ->where('id', '!=', $user->id);
 
-        return view('student.my_class');
+        return view('student.my_class',$data);
     }
 
     // student/my_profile : ma3loumat dyalo
