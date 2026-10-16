@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
+use App\Support\PanelData;
 
 use App\Models\User;
 
@@ -168,10 +169,10 @@ class StudentController extends Controller
         $user = Auth::user();
 
         $data['header_title'] = 'My Class';
-        $data['class']        = User::classById($user->class_id);
-        $data['subjects']     = User::subjectRows([(int) $user->class_id]);
-        $data['teachers']     = User::classTeachers($user->class_id);
-        $data['classmates']   = User::students([(int) $user->class_id])
+        $data['class']        = PanelData::classById($user->class_id);
+        $data['subjects']     = PanelData::subjectRows([(int) $user->class_id]);
+        $data['teachers']     = PanelData::classTeachers($user->class_id);
+        $data['classmates']   = PanelData::students([(int) $user->class_id])
                                     ->where('id', '!=', $user->id);
 
         return view('student.my_class', $data);

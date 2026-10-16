@@ -58,6 +58,10 @@
     />
     <!--end::Third Party Plugin(Bootstrap Icons)-->
 
+    <!--CDN for using fonawesome icon website  https://fontawesome.com/search?o=r&m=free -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
     <!--begin::Required Plugin(AdminLTE)-->
     <link rel="stylesheet" href="{{url('dist/css/adminlte.css')}}" />
     <!--end::Required Plugin(AdminLTE)-->

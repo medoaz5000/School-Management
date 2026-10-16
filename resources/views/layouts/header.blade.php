@@ -237,28 +237,28 @@
               
               <li class="nav-item">
                 <a href="{{url('admin/admin/list')}}" class="nav-link @if(Request::segment(2) == 'admin') active @endif">
-                  <i class="nav-icon bi bi-person"></i>
+                  <i class="nav-icon fa-etch fa-solid fa-shield"></i>
                   <p>Admin</p>
                 </a>
               </li>
 
               <li class="nav-item">
                 <a href="{{url('admin/student/list')}}" class="nav-link @if(Request::segment(2) == 'student') active @endif">
-                  <i class="nav-icon bi bi-person-lines-fill"></i>
+                  <i class="nav-icon fa-duotone fa-solid fa-user-graduate"></i>
                   <p>Student</p>
                 </a>
               </li>
 
               <li class="nav-item">
                 <a href="{{url('admin/parent/list')}}" class="nav-link @if(Request::segment(2) == 'parent') active @endif">
-                  <i class="nav-icon bi bi-people-fill"></i>
+                  <i class="nav-icon fa-solid fa-users"></i>
                   <p>Parent</p>
                 </a>
               </li>
 
               <li class="nav-item">
                 <a href="{{url('admin/teacher/list')}}" class="nav-link @if(Request::segment(2) == 'teacher') active @endif">
-                  <i class="nav-icon bi bi-people-fill"></i>
+                  <i class="nav-icon fa-solid fa-chalkboard-user"></i>
                   <p>Teacher</p>
                 </a>
               </li>
